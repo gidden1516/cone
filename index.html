@@ -8,7 +8,7 @@
     <div>
         <audio autoplay loop onloadstart="this.volume=0.3">
                 
-                <source src="/[가사자막 ] 안유진-I LOVE YOU 3000.mp3" type="audio/mpeg">
+                <source src="/[가사자막 ] 안유진-I LOVE YOU 3000.mp3" type="audio/mp3">
  
         </audio>
     </div>
@@ -77,7 +77,7 @@
             background-image: url('./img3.jpg');
         }
         #image4 {
-            background-image: url('./img4.png');
+            background-image: url('./img4.jpg');
         }
         .photo_description {
             color: white;
@@ -118,9 +118,12 @@
             } else if (number === 2) {
                 document.querySelector("#desc2").classList.remove("hideText");
                 document.querySelector("#desc2").classList.add("showText");
-            } else {
+            } else if (number ===3) {
                 document.querySelector("#desc3").classList.remove("hideText");
                 document.querySelector("#desc3").classList.add("showText");
+            } else {
+                document.querySelector("#desc4").classList.remove("hideText");
+                document.querySelector("#desc4").classList.add("showText");
             }
         }
 
@@ -134,9 +137,12 @@
             } else if (number === 2) {
                 document.querySelector("#desc2").classList.remove("showText");
                 document.querySelector("#desc2").classList.add("hideText");
-            } else {
+            } else if (number ===3) {
                 document.querySelector("#desc3").classList.remove("showText");
                 document.querySelector("#desc3").classList.add("hideText");
+            } else {
+                document.querySelector("#desc4").classList.remove("showText");
+                document.querySelector("#desc4").classList.add("hideText");
             }
         }
 
@@ -178,9 +184,20 @@
 
             >
                 <span id="desc3" class="photo_description">
-                    제주도 여행 때 석양
+                    Valentine Day Gift
                 </span>
             </div>
+            <div id="image4" class="photo-frame"
+            onmouseover="showText(4)"
+            onmouseout="hideText(4)"
+            onclick="alertText(4)"
+
+            >
+                <span id="desc4" class="photo_description">
+                    제주도 여행 때 석양
+                </span>
+            </div>       
+
             <div class="photo-frame">
                 <iframe
                 src="https://www.youtube.com/embed/dxGC5skfCQA"
