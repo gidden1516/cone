@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale= 2">
+    <meta name="viewport" content="width=device-width, initial-scale= 1">
     <title>Document</title>
-    <div>
-        <audio autoplay onloadstart="this.volume=0.3" controls style="position: absolute; right: 0;">
+   <!-- <div>
+        <audio onloadstart="this.volume=0.3" controls width="50" controls style="position: absolute; right: 400px;">
                 
-                <source src="./I love you 3000.mp3" type="audio/mp3">
+                <source src="/I love you 3000.mp3" type="audio/mp3">
  
         </audio>
-    </div>
+    </div> -->
+    <style>
+        audio {
+          
+          transform: scale(0.75);
+          position: absolute;
+          right: 280px;
+        }
+      </style>
+      <div>
+        <audio onloadstart="this.volume=0.3" controls>
+          <source src="/I love you 3000.mp3" type="audio/mp3">
+        </audio>
+      </div>
+    
     <style>
            /* 이서윤체 폰트 적용을 위한 코드 */
       @font-face {
@@ -155,6 +170,17 @@
 </head>
    
 <body>
+    <style>
+        body {
+          transform: scale(1.5); /* 150%로 확대 */
+          transform-origin: top /* 왼쪽 상단을 기준으로 확대 */
+        }
+      </style>
+
+   <!-- <div style="position: fixed; left: 400px; top: 190px; font-size: 20px;"> 
+    <p>이 텍스트는 창 가장 맨 왼쪽에 배치됩니다.</p>
+   </div> -->
+
     <div class="container">
         <div class="photos">
             <div id="image1" class="photo-frame"
